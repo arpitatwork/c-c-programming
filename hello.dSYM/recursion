@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+void fibo(int n){
+    static int a = 0, b = 1, temp;
+    if(n != 0 ){
+        temp = a + b;
+        printf("%d\t", a);
+        a = b;
+        b = temp;
+        fibo(n - 1);
+    }
+
+}
+int main(){
+    int n;
+    printf("The amount of fibo number :");
+    scanf("%d",&n);
+    fibo(n);
+    return 0;
+}
